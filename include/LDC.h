@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Maillon.h"
 using namespace std;
@@ -7,36 +6,68 @@ template <typename T>
 class LDC
 {
 public:
-    friend Maillon<T>;
     LDC<T>()
     {
-        tete = NULL;
-        courant = NULL;
+        this->tete = NULL;
+        this->courant = NULL;
+        this->length = 0;
     };
-    LDC<T>(T& d)
-    {
-        tete = new Maillon<T>(d);
-        courant = tete;
-    };
-    LDC<T>(LDC<T> &);
+    //LDC<T>(LDC<T> &);
     ~LDC<T>()
     {
-
+        while(this->tete)
+        {
+            delete courant;
+            delete tete;
+        }
     };
 
-    T& Contenu();          //retourne l'element de la liste
-    LDC<T> &Acces(int i);  //mettre courant sur le i ème elt
-    LDC<T> &Suc();         //mettre courant sur suivant
+    T Contenu();          //retourne l'element de la liste courant
+    T ContenuTete();    //retourne l'element de la liste tete
+    T* Acces(int i);  //mettre courant sur le i ème elt
+    T* Suc();         //mettre courant sur suivant
     int Longueur();        //taille de la liste
-    LDC<T> &Inserer(T &e); //inserer e après la position courante
+    void Inserer(T* e); //inserer e après la position courante
+    
 private:
-    Maillon<T> *tete;    //début de la liste
-    Maillon<T> *courant; //position courrant
+    T* tete;    //début de la liste
+    T* courant; //position courante
+    int length;
 };
 
 template <typename T>
-T& LDC<T>::Contenu()
+T LDC<T>::Contenu()
 {
-    return courant->data;
+    return courant->getData();
+}
+template <typename T>
+T LDC<T>::ContenuTete()
+{
+    return tete->getData();
 }
 
+template <typename T>
+void LDC<T>::Inserer(T* e)
+{
+   e->next = NULL;
+   e->prev = NULL;
+   if(this->tete == NULL)
+   {
+       this->tete = e;
+       this->courant = this->tete;
+       this->length += 1;
+   }
+   else
+   {
+       this->courant->next = e;
+       e->prev = this->courant;
+       this->courant = e;
+       this->length += 1;
+   }
+}
+
+/*template <typename T>
+T* LDC<T>::Acces(int i)
+{
+
+}*/

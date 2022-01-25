@@ -73,15 +73,15 @@ CMakeFiles/LDC.dir/main.cpp.o: CMakeFiles/LDC.dir/flags.make
 CMakeFiles/LDC.dir/main.cpp.o: ../main.cpp
 CMakeFiles/LDC.dir/main.cpp.o: CMakeFiles/LDC.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paf/Documents/LDC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LDC.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LDC.dir/main.cpp.o -MF CMakeFiles/LDC.dir/main.cpp.o.d -o CMakeFiles/LDC.dir/main.cpp.o -c /home/paf/Documents/LDC/main.cpp
+	/usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LDC.dir/main.cpp.o -MF CMakeFiles/LDC.dir/main.cpp.o.d -o CMakeFiles/LDC.dir/main.cpp.o -c /home/paf/Documents/LDC/main.cpp
 
 CMakeFiles/LDC.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LDC.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paf/Documents/LDC/main.cpp > CMakeFiles/LDC.dir/main.cpp.i
+	/usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paf/Documents/LDC/main.cpp > CMakeFiles/LDC.dir/main.cpp.i
 
 CMakeFiles/LDC.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LDC.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paf/Documents/LDC/main.cpp -o CMakeFiles/LDC.dir/main.cpp.s
+	/usr/bin/x86_64-linux-gnu-g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paf/Documents/LDC/main.cpp -o CMakeFiles/LDC.dir/main.cpp.s
 
 # Object files for target LDC
 LDC_OBJECTS = \

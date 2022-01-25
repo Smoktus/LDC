@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/LDC.dir/main.cpp.o -o LDC 
+/usr/bin/x86_64-linux-gnu-g++-7 CMakeFiles/LDC.dir/main.cpp.o -o LDC 
